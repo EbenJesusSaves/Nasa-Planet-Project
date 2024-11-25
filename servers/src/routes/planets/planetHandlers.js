@@ -1,8 +1,11 @@
-const planets = []
+import { loadedPlanetsOBject } from "../../models/planet.modules.js"
 
-const getAllPlanets = (req, res) => {
+const planets = ['king', 'forth']
 
-    res.status(200).json({
-        message: planets
+export const getAllPlanets = (req, res) => {
+
+    // good practice
+    return res.status(200).json({
+        message: loadedPlanetsOBject.habitablePlanets
     })
 }

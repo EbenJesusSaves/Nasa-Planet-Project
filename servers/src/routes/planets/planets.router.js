@@ -1,10 +1,11 @@
 import { Router } from "express";
+import { getAllPlanets } from "./planetHandlers.js";
 
 const planetRouter = Router()
 
 
 
-planetRouter.get('/planets')
+planetRouter.get('/planets', getAllPlanets)
 
 
 
