@@ -20,7 +20,16 @@ async function httpGetLaunches() {
 
 async function httpSubmitLaunch(launch) {
   // TODO: Once API is ready.
-  // Submit given launch data to launch system.
+  console.log(launch)
+  return await fetch('http://localhost:1000/launches', {
+    method: 'POST',
+    body: JSON.stringify(launch),
+    headers: {
+      "content-Type": "application/json"
+    }
+  })
+
+
 }
 
 async function httpAbortLaunch(id) {
